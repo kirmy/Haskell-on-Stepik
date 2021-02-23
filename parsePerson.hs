@@ -35,3 +35,14 @@ func1 :: [String] -> [Either Error (String, String)]
 func1 (s:ls) = (splitString ([],s)) : func1 ls
 func1 [] = []
 -}
+    sl = splitLines "firstName = John\nlastName = Connor\nage = 30"
+    firstName = loolup "firstName" sl
+    parsePerson = if firstMane == Nothing then Left IncompleteDataError 
+        else Person { firstName ==  firstName }
+    lastName = loolup "lastName" sl
+    parsePerson = if lastName == Nothing then Left IncompleteDataError 
+        else Person { lastName ==  lastName }
+    age = lookup "age" sl
+
+
+
